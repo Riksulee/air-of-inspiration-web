@@ -26,7 +26,7 @@ export default class Routes {
         dir: 'ltr',
         lang: 'en-US',
         orientation: 'any',
-        start_url: '/examples/material-ui',
+        start_url: '/',
         background_color: '#111',
         theme_color: '#111',
         display: 'standalone',

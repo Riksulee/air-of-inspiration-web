@@ -1,20 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import SimpleLineChart from './SimpleLineChart';
-import SimpleTable from './SimpleTable';
-
-const drawerWidth = 240;
+import React, { Component } from 'react';
+import UpperPart from './UpperPart';
+import BottomPart from './BottomPart';
 
 const styles = theme => ({
   root: {
@@ -93,7 +79,7 @@ const styles = theme => ({
   },
 });
 
-class Home extends React.Component {
+class App extends Component {
   state = {
     open: true,
   };
@@ -106,105 +92,16 @@ class Home extends React.Component {
     this.setState({ open: false });
   };
   
-  render() {
-    const { classes } = this.props;
-    
+  render() {  
     return (
       <React.Fragment>
-        <CssBaseline />
-        <div className={classes.root}>
-          <AppBar
-            position="absolute"
-            className={classNames(classes.appBar, this.state.open && classes.appBarShift)}
-          >
-            <Toolbar disableGutters={!this.state.open} className={classes.toolbar}>
-              <IconButton
-                color="inherit"
-                aria-label="Open drawer"
-                onClick={this.handleDrawerOpen}
-                className={classNames(
-                  classes.menuButton,
-                  this.state.open && classes.menuButtonHidden,
-                )}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Typography
-                component="h1"
-                variant="h6"
-                color="inherit"
-                noWrap
-                className={classes.title}
-              >
-                Material-UI + ReactPWA
-              </Typography>
-              <Button color="default" component='a' href="https://github.com/Atyantik/example-pawjs-material-ui">
-                <Typography>
-                  View Source Code
-                </Typography>
-              </Button>
-            </Toolbar>
-          </AppBar>
-          <Drawer
-            variant="permanent"
-            classes={{
-              paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
-            }}
-            open={this.state.open}
-          >
-            <div className={classes.toolbarIcon}>
-              <Typography variant="h6">
-                Menu
-              </Typography>
-              <IconButton onClick={this.handleDrawerClose}>
-                <ChevronLeftIcon />
-              </IconButton>
-            </div>
-          </Drawer>
-          <main className={classes.content}>
-            <div className={classes.appBarSpacer} />
-            <Typography variant="h4" gutterBottom component="h2">
-              Orders
-            </Typography>
-            <Typography component="div" className={classes.chartContainer}>
-              <SimpleLineChart />
-            </Typography>
-            <div className={classes.appBarSpacer} />
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
-            <ins
-              className="adsbygoogle"
-              style={{ display: 'block' }}
-              data-ad-client="ca-pub-7586505628408924"
-              data-ad-slot="5652642939"
-              data-ad-format="auto"
-            />
-            <div className={classes.appBarSpacer} />
-            <Typography variant="h4" gutterBottom component="h2">
-              Products
-            </Typography>
-            <div className={classes.tableContainer}>
-              <SimpleTable />
-            </div>
-            <div className={classes.appBarSpacer} />
-            <div>
-              <script src="https://codefund.io/scripts/fefc6de5-a0ce-46e8-a15d-f43733b5b454/embed.js" />
-              <div id="codefund_ad" />
-            </div>
-            <div className={classes.appBarSpacer} />
-            <div>
-              This is an example of implementation of Material UI with ReactPWA.
-              Help us grow further visit&nbsp;
-              <a href="https://opencollective.com/react-pwa" target="_blank" rel="noreferrer nofollow noopener">OpenCollective</a>
-            </div>
-          </main>
-        </div>
+      <div>
+        <UpperPart />
+        <BottomPart />
+      </div>
       </React.Fragment>
     );
   }
 }
 
-Home.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(Home);
+export default App;

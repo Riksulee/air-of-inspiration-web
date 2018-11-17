@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import cigarette from './cigarette.png';
-import './CigaretteHolder.css';
+import styles from './CigaretteHolder.css';
 
 class BottomPart extends Component {
     render() {
@@ -8,15 +8,15 @@ class BottomPart extends Component {
         const cigarettePic = <img src={cigarette} alt="cigarette" height="100" width="200" />
 
         return (
-            <div className="CigaretteContainer">
-                <div class="row">
-                    <div className="column">
+            <div className={styles.CigaretteContainer}>
+                <div className={styles.row}>
+                    <div className={styles.column}>
                         {cigarettePic}
                     </div>
-                    <div className="column">
+                    <div className={styles.column}>
                         {cigarettePic}
                     </div>
-                    <div className="column">
+                    <div className={styles.column}>
                         {cigarettePic}
                     </div>
                 </div>

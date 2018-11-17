@@ -2,13 +2,13 @@ import React from 'react';
 import FavIcon from './resources/img/favicon.ico';
 import { SheetsRegistry } from 'jss';
 import JssProvider from 'react-jss/lib/JssProvider';
-import {
-  MuiThemeProvider,
-  createMuiTheme,
-  createGenerateClassName,
-} from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
-import red from '@material-ui/core/colors/red';
+// import {
+//   MuiThemeProvider,
+//   createMuiTheme,
+//   createGenerateClassName,
+// } from '@material-ui/core/styles';
+// import blue from '@material-ui/core/colors/blue';
+// import red from '@material-ui/core/colors/red';
 
 export default class Server {
   apply(serverHandler) {
@@ -18,17 +18,17 @@ export default class Server {
       // Create a sheetsManager instance.
       const sheetsManager = new Map();
   
-      // Create a theme instance.
-      const theme = createMuiTheme({
-        palette: {
-          primary: blue,
-          accent: red,
-          type: 'light',
-        },
-        typography: {
-          useNextVariants: true,
-        },
-      });
+      // // Create a theme instance.
+      // const theme = createMuiTheme({
+      //   palette: {
+      //     primary: blue,
+      //     accent: red,
+      //     type: 'light',
+      //   },
+      //   typography: {
+      //     useNextVariants: true,
+      //   },
+      // });
   
       // Create a new class name generator.
       const generateClassName = createGenerateClassName();

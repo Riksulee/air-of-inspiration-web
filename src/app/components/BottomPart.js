@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import PMHolder from './PMHolder';
-import './UpperPart.css';
+import CigaretteHolder from './CigaretteHolder';
+import styles from './BottomPart.css';
 
 class UpperPart extends Component {
   render() {
     return (
-      <div className="UpperPart">
-        <PMHolder />
+      <div className={styles.BottomPart}>
+        <CigaretteHolder />
       </div>
     );
   }
