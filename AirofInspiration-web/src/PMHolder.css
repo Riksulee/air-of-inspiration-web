@@ -1,0 +1,24 @@
+.TextBackground {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    background-color: #D5F7EB;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px; 
+    padding: 20px;
+}
+
+.PMHolderText {
+    margin-left: 50px;
+    margin-right: auto;
+    width: 8em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 90px;
+    color: #365B91;
+}
+
+.PMHolder {
+    align-content: center;
+    padding: 30px;
+}
